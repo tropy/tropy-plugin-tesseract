@@ -1,7 +1,7 @@
 {
   "name": "tropy-plugin-tesseract",
   "productName": "Tropy Tesseract Plugin",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "A Tropy plugin for text extraction using Tesseract.",
   "icon": "icon.svg",
   "main": "index.js",
