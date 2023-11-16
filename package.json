@@ -1,0 +1,54 @@
+{
+  "name": "tropy-plugin-tesseract",
+  "productName": "Tropy Tesseract Plugin",
+  "version": "1.0.0-beta.1",
+  "description": "A Tropy plugin for text extraction using Tesseract.",
+  "icon": "icon.svg",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run build",
+    "test": "electron-mocha --renderer test",
+    "lint": "eslint --color src test",
+    "build": "rollup -c rollup.config.mjs",
+    "watch": "rollup -c rollup.config.mjs --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tropy/tropy-plugin-tesseract.git"
+  },
+  "keywords": [
+    "tropy",
+    "plugin"
+  ],
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tropy/tropy-plugin-tesseract/issues"
+  },
+  "homepage": "https://github.com/tropy/tropy-plugin-tesseract#readme",
+  "hooks": {
+    "extract": true
+  },
+  "options": [
+    {
+      "field": "binary",
+      "label": "Tesseract binary",
+      "type": "file",
+      "required": true
+    },
+    {
+      "field": "language",
+      "label": "Source language",
+      "type": "string",
+      "required": true,
+      "default": "en"
+    }
+  ],
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "electron": "^27.1.0",
+    "electron-mocha": "^12.1.0",
+    "eslint": "^8.53.0",
+    "rollup": "^4.4.1",
+    "rollup-plugin-license": "^3.2.0"
+  }
+}
